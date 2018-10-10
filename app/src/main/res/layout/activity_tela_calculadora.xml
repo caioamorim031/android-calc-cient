@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_marginTop="50px"
-    tools:context=".view.telaCalculadora">
+    tools:context=".gui.telaCalculadora">
 
     <EditText
         android:id="@+id/vlResultado"
@@ -20,7 +20,7 @@
         android:scrollbars="vertical"
         android:background="@drawable/display_calculadora"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
+        app:layout_constraintTop_toTopOf="parent" />
 
 
     <TableLayout
@@ -32,6 +32,7 @@
         app:layout_constraintBottom_toBottomOf="parent">
 
         <TableRow>
+
             <Button
                 android:id="@+id/n7"
                 android:text="7"
@@ -42,8 +43,8 @@
                 android:textColor="#ffffff"
                 android:layout_margin="5px"
                 android:onClick="onClick"
-                android:background="@drawable/botao_background"
-                />
+                android:background="@drawable/botao_background" />
+
             <Button
                 android:id="@+id/n8"
                 android:text="8"
@@ -54,8 +55,7 @@
                 android:textColor="#ffffff"
                 android:layout_margin="5px"
                 android:onClick="onClick"
-                android:background="@drawable/botao_background"
-                />
+                android:background="@drawable/botao_background" />
 
             <Button
                 android:id="@+id/n9"
@@ -67,14 +67,13 @@
                 android:textColor="#ffffff"
                 android:layout_margin="5px"
                 android:onClick="onClick"
-                android:background="@drawable/botao_background"
-                />
-
+                android:background="@drawable/botao_background" />
 
 
         </TableRow>
 
         <TableRow>
+
             <Button
                 android:id="@+id/n4"
                 android:text="4"
@@ -85,8 +84,7 @@
                 android:textColor="#ffffff"
                 android:layout_margin="5px"
                 android:onClick="onClick"
-                android:background="@drawable/botao_background"
-                />
+                android:background="@drawable/botao_background" />
 
             <Button
                 android:id="@+id/n5"
@@ -98,8 +96,7 @@
                 android:textColor="#ffffff"
                 android:layout_margin="5px"
                 android:onClick="onClick"
-                android:background="@drawable/botao_background"
-                />
+                android:background="@drawable/botao_background" />
 
             <Button
                 android:id="@+id/n6"
@@ -111,13 +108,13 @@
                 android:textColor="#ffffff"
                 android:layout_margin="5px"
                 android:onClick="onClick"
-                android:background="@drawable/botao_background"
-                />
+                android:background="@drawable/botao_background" />
 
 
         </TableRow>
 
         <TableRow>
+
             <Button
                 android:id="@+id/n1"
                 android:text="1"
@@ -128,8 +125,7 @@
                 android:textColor="#ffffff"
                 android:layout_margin="5px"
                 android:onClick="onClick"
-                android:background="@drawable/botao_background"
-                />
+                android:background="@drawable/botao_background" />
 
             <Button
                 android:id="@+id/n2"
@@ -141,8 +137,7 @@
                 android:textColor="#ffffff"
                 android:layout_margin="5px"
                 android:onClick="onClick"
-                android:background="@drawable/botao_background"
-                />
+                android:background="@drawable/botao_background" />
 
             <Button
                 android:id="@+id/n3"
@@ -154,14 +149,13 @@
                 android:textColor="#ffffff"
                 android:layout_margin="5px"
                 android:onClick="onClick"
-                android:background="@drawable/botao_background"
-                />
-
+                android:background="@drawable/botao_background" />
 
 
         </TableRow>
 
         <TableRow>
+
             <Button
                 android:id="@+id/ponto"
                 android:text="."
@@ -172,8 +166,7 @@
                 android:textColor="#ffffff"
                 android:layout_margin="5px"
                 android:onClick="onClick"
-                android:background="@drawable/botao_background"
-                />
+                android:background="@drawable/botao_background" />
 
             <Button
                 android:id="@+id/n0"
@@ -185,8 +178,7 @@
                 android:textColor="#ffffff"
                 android:layout_margin="5px"
                 android:onClick="onClick"
-                android:background="@drawable/botao_background"
-                />
+                android:background="@drawable/botao_background" />
 
             <Button
                 android:id="@+id/resultado"
@@ -197,13 +189,14 @@
                 android:textSize="50px"
                 android:textColor="#ffffff"
                 android:layout_margin="5px"
-                android:background="@drawable/botao_background"
-                />
+                android:onClick="tratarOperacoes"
+                android:background="@drawable/botao_background" />
 
         </TableRow>
 
 
         <TableRow>
+
             <Button
                 android:id="@+id/enviar"
                 android:text="enviar"
@@ -214,8 +207,7 @@
                 android:layout_span="2"
                 android:textColor="#ffffff"
                 android:layout_margin="5px"
-                android:background="@drawable/botao_background"
-                />
+                android:background="@drawable/botao_background" />
 
             <Button
                 android:id="@+id/alternar"
@@ -227,8 +219,7 @@
 
                 android:textColor="#ffffff"
                 android:layout_margin="5px"
-                android:background="@drawable/botao_background"
-                />
+                android:background="@drawable/botao_background" />
 
         </TableRow>
 
@@ -254,6 +245,7 @@
                 android:background="@drawable/botao_background"
                 android:text="+"
                 android:textSize="50px"
+                android:onClick="onClick"
                 android:textStyle="bold" />
 
             <Button
@@ -278,6 +270,7 @@
                 android:background="@drawable/botao_background"
                 android:text="-"
                 android:textSize="50px"
+                android:onClick="onClick"
                 android:textStyle="bold" />
 
             <Button
@@ -302,6 +295,7 @@
                 android:background="@drawable/botao_background"
                 android:text="*"
                 android:textSize="50px"
+                android:onClick="onClick"
                 android:textStyle="bold" />
 
             <Button
@@ -326,6 +320,7 @@
                 android:background="@drawable/botao_background"
                 android:text="/"
                 android:textSize="50px"
+                android:onClick="onClick"
                 android:textStyle="bold" />
 
             <Button
@@ -336,11 +331,11 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="5px"
                 android:textSize="50px"
-                android:background="@drawable/botao_background"
-                />
+                android:background="@drawable/botao_background" />
         </TableRow>
 
         <TableRow>
+
             <Button
                 android:id="@+id/cos"
                 android:text="cos"
@@ -349,8 +344,7 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="5px"
                 android:textSize="50px"
-                android:background="@drawable/botao_background"
-                />
+                android:background="@drawable/botao_background" />
 
             <Button
                 android:id="@+id/tan"
@@ -360,12 +354,12 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="5px"
                 android:textSize="50px"
-                android:background="@drawable/botao_background"
-                />
+                android:background="@drawable/botao_background" />
 
         </TableRow>
 
         <TableRow>
+
             <Button
                 android:id="@+id/clean"
                 android:text="c"
@@ -374,8 +368,8 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="5px"
                 android:textSize="50px"
-                android:background="@drawable/botao_background"
-                />
+                android:onClick="tratarOperacoes"
+                android:background="@drawable/botao_background" />
 
             <Button
                 android:id="@+id/raiz"
@@ -385,13 +379,10 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="5px"
                 android:textSize="50px"
-                android:background="@drawable/botao_background"
-                />
+                android:background="@drawable/botao_background" />
         </TableRow>
 
     </TableLayout>
-
-
 
 
 </android.support.constraint.ConstraintLayout>
